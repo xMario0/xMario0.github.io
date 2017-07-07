@@ -276,7 +276,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2>
+        <h1 id="django-回忆录"><a href="#django-回忆录" class="headerlink" title="django 回忆录"></a>django 回忆录</h1><h2 id="django-目录"><a href="#django-目录" class="headerlink" title="django 目录"></a>django 目录</h2><ol>
+<li>startproject创建了一个项目目录,结构如下</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">(blog) [root@django2 blog]# django-admin startproject mysite</div><div class="line">(blog) [root@django2 blog]# cd mysite/</div><div class="line">(blog) [root@django2 mysite]# tree</div><div class="line">.</div><div class="line">├── manage.py</div><div class="line">└── mysite</div><div class="line">    ├── __init__.py</div><div class="line">    ├── settings.py</div><div class="line">    ├── urls.py</div><div class="line">    └── wsgi.py</div></pre></td></tr></table></figure>
+<ul>
+<li>manage.py:一种命令行工具，允许你以多种方式与该Django项目进行交互。python manage.py help,能列出它所能做的事情。此文件一般情况下不需要改动。</li>
+<li>settings.py:该Django项目的设置与配置。查看并理解这个文件中可用的设置类型及其默认值。</li>
+<li>urls.py:Django项目的URL设置。可视其为你的django网站的目录。</li>
+<li>wsgi.py:(Python Web Server Gateway Interface)服务器网关接口，是Python语言定义的web服务器和web服务程序或者框架之间的一种简单而通用的接口。简单来说就是与apache的交互接口。</li>
+</ul>
+<h2 id="django-应用生成"><a href="#django-应用生成" class="headerlink" title="django 应用生成"></a>django 应用生成</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">(blog) [root@django2 mysite]# django-admin startapp blog</div><div class="line">(blog) [root@django2 mysite]# cd blog/</div><div class="line">(blog) [root@django2 blog]# tree</div><div class="line">.</div><div class="line">├── admin.py</div><div class="line">├── apps.py</div><div class="line">├── __init__.py</div><div class="line">├── migrations</div><div class="line">│   └── __init__.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">└── views.py</div></pre></td></tr></table></figure>
+<ul>
+<li>admin.py:admin后台管理文件</li>
+<li>migrations:数据库相关目录</li>
+<li>models.py:主要用一个 Python 类来描述数据表。 称为模型(model) 。 运用这个类,你可以通过简单的 Python 的代码来创建、检索、更新、删除 数据库中的记录而无需写一条又一条的SQL语句。</li>
+<li>views.py:包含了页面的业务逻辑。 latest_books()函数叫做视图。</li>
+<li>tests.py:测试文件</li>
+<li>urls.py(如存在)，路由。</li>
+<li>form.py(如存在)，表单处理。</li>
+</ul>
+
       
     </div>
     
